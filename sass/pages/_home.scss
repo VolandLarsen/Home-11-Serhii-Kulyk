@@ -2,19 +2,6 @@ body {
     background-color: yellow;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.add-items {
-    height: 36px;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-
-}
-
 .form-control {
     width: 55%;
     height: 36px;
@@ -36,11 +23,13 @@ body {
     cursor: pointer;
     background-color: black;
     border: 3px solid black;
+    &:hover {
+        color: chocolate;
+        opacity: 0.9;
+    }
 }
 
-.add:hover {
-    color: chocolate;
-}
+
 
 ul {
     padding: 0;
@@ -48,8 +37,10 @@ ul {
     list-style: none;
 }
 
-hr {
-    border-bottom: 0;
+.hr {
+    height: 3px;
+    box-sizing: border-box;
+    background-color: black;
     margin: 15px 0;
 }
 
@@ -67,4 +58,6 @@ hr {
     font-size: 30px;
 }
 
-.completed { text-decoration: line-through; }
+.completed {
+    text-decoration: line-through;
+}
