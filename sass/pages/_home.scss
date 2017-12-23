@@ -1,0 +1,70 @@
+body {
+    background-color: yellow;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.add-items {
+    height: 36px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form-control {
+    width: 55%;
+    height: 36px;
+    border: 3px solid black;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 10px 0 0 10px;
+    background-color: yellow;
+    color: black;
+}
+
+.add {
+    float: right;
+    width: 34%;
+    height: 44px;
+    color: yellow;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    background-color: black;
+    border: 3px solid black;
+}
+
+.add:hover {
+    color: chocolate;
+}
+
+ul {
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+hr {
+    border-bottom: 0;
+    margin: 15px 0;
+}
+
+.remove {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+#list-items {
+    font-size: 30px;
+}
+
+.completed { text-decoration: line-through; }

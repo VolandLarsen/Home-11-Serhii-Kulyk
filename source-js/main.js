@@ -1,14 +1,25 @@
-jQuery(document).ready(function(event) {
-  jQuery('form').submit(function() {
-    if (jQuery('.input').val() !== '') {
-      var newTask = jQuery('.input').val()
-      var newLi = jQuery('<li>' + newTask + '<a class="remove" href="#">X</a></li>');
-      newLi.on('click', function() {
-        jQuery(this).remove() // Attach the event handler *before* adding the element
-      })
-      jQuery('ul').prepend(newLi) // To put the new task at the top of the list
-      jQuery('.input').val('')
-      return false; // So the change persists
+jQuery(document).ready(function () {
+  jQuery('#list-items').html(localStorage.getItem('listItems'));
+  jQuery('.add-items').submit(function(event){
+    event.preventDefault();
+    var item = jQuery('#todo-list-item').val();
+    if(item){
+      jQuery('#list-items').append("<li>" + item + "<a class='remove'>x</a><hr></li>");
+      localStorage.setItem('listItems', jQuery('#list-items').html());
+      jQuery('#todo-list-item').val("");
     }
+  });
+  jQuery(document).on('change', '.checkbox', function() {
+    if(jQuery(this).attr('checked')) {
+      jQuery(this).removeAttr('checked');
+    } else {
+      jQuery(this).attr('checked', 'checked');
+    }
+    jQuery(this).parent().toggleClass('completed');
+    localStorage.setItem('listItems', jQuery('#list-items').html());
+  });
+  jQuery(document).on('click', '.remove', function() {
+    jQuery(this).parent().remove();
+    localStorage.setItem('listItems', jQuery('#list-items').html());
   });
 });

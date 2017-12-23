@@ -8,22 +8,21 @@
 </head>
 <body>
 <header>
-    <h1>
-        jQuery To-Do List
-    </h1>
-    <form>
-        <h2>Enter a new task:</h2>
-        <input class="input" type="text">
-        <input type="submit" value="Add">
-    </form>
-    <ul title="Click X to delete">
-    </ul>
+
 </header>
+<div class="container">
+<form class="add-items">
+    <input type="text" class="form-control" id="todo-list-item" placeholder="What do you need to do today?">
+    <button class="add" type="submit">Add to List</button>
+</form>
+<ul id="list-items"></ul>
+</div>
+
 
 <footer>
 
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
