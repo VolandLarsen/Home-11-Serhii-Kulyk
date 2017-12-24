@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
     event.preventDefault();
     var item = jQuery('#todo-list-item').val();
     if(item){
-      jQuery('#list-items').append("<li>" + item + "<a class='remove'>x</a><div class='hr'></div></li>");
+      jQuery('#list-items').append("<li><input class='checkbox' type='checkbox'/>" + item + "<a class='remove'>x</a><div class='hr'></div></li>");
       localStorage.setItem('listItems', jQuery('#list-items').html());
       jQuery('#todo-list-item').val("");
     }
